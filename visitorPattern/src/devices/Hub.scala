@@ -3,14 +3,14 @@ package devices
 
 import visitors.Visitor
 
-class Hub extends Visitable{
+case class Hub(status: String) extends Visitable{
 
   override def accept(visitor: Visitor): Unit = {
     visitor.visit(this)
   }
 
   def getStatus(): String = {
-    "Hub is OK"
+    "Hub is " + status
   }
 
 

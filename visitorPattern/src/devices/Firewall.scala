@@ -3,13 +3,13 @@ package devices
 
 import com.ariba.visitors.Visitor
 
-class Firewall extends Visitable {
+case class Firewall(status: String) extends Visitable {
 
   override def accept(visitor: Visitor): Unit = {
     visitor.visit(this)
   }
 
   def getStatus(): String = {
-    "Firewall is OK"
+    "Firewall is " + status
   }
 }
