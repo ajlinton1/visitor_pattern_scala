@@ -37,7 +37,7 @@ class VisitorPatternSpec extends AnyFlatSpec {
         case server: Server => { println(server.getStatus())}
       }
     }
-    
+
     for (device <- devices) {
       device.acceptFunction(visitor)
     }
